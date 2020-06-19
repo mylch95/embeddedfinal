@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mainscreen">
+
+
+    <ImageView
+        android:id="@+id/gif_image"
+        android:layout_width="236dp"
+        android:layout_height="219dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finish" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="216dp"
+        android:layout_height="50dp"
+        android:textColor="@android:color/black"
+       android:gravity="center"
+        android:layout_marginTop="76dp"
+
+        app:layout_constraintStart_toEndOf="@+id/gif_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mainbtn"
+        android:layout_width="140dp"
+        android:layout_height="57dp"
+        android:background="@drawable/tab1_background"
+        android:drawableLeft="@drawable/list_48"
+        android:paddingLeft="20dp"
+        android:text="메인"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/calendarbtn" />
+
+    <Button
+        android:id="@+id/calendarbtn"
+        android:layout_width="140dp"
+        android:layout_height="57dp"
+        android:background="@drawable/tab2_background"
+        android:drawableLeft="@drawable/calendar48"
+        android:paddingLeft="20dp"
+        android:text="달력"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/stackbtn" />
+
+    <Button
+        android:id="@+id/stackbtn"
+        android:layout_width="140dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="280dp"
+        android:background="@drawable/tab3_background"
+        android:drawableLeft="@drawable/graph_48"
+        android:paddingLeft="20dp"
+        android:text="통계"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="102dp"
+        android:layout_height="30dp"
+        android:background="@drawable/tab2_background"
+        android:text="오늘은여기까지"
+        app:layout_constraintEnd_toEndOf="@+id/stackbtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/gif_image2"
+        android:layout_width="207dp"
+        android:layout_height="127dp"
+        app:layout_constraintEnd_toEndOf="@+id/stackbtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/gif_image"
+        app:layout_constraintTop_toBottomOf="@+id/timer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

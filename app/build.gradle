@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.example.embeddedfinal"
+        minSdkVersion 27
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation "com.android.support:support-annotations:27.0.2"
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.android.volley:volley:1.1.0'
+
+    implementation 'lib.kingja.switchbutton:switchbutton:1.1.8'
+    implementation 'com.github.channguyen:rsv:1.0.1'
+
+
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.stanfy:gson-xml-java:0.1.7'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.1.6'
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.1.1'
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.0'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.android.things.contrib:driver-pwmservo:1.0'
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    compileOnly 'com.google.android.things:androidthings:1.0'
+
+}
